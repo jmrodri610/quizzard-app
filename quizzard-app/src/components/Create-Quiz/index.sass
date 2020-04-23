@@ -1,0 +1,201 @@
+.create
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    width: 100vw
+    height: 100vh
+    font-family: 'Montserrat Alternates', sans serif
+    background-color: ghostwhite
+    &__form
+        width: 100vw
+    &__header
+        display: flex
+        justify-content: space-around
+        align-items: center
+        height: 10vh
+        width: 100vw
+        background-color: #461790
+        position: fixed
+        top: 0
+        z-index: 1
+    &__logo
+        color: white
+        font-family: Lobster, cursive
+        font-size: 120%
+        &:link, :visited, :active
+            text-decoration: none
+    &__done
+        background-color: #257beb
+        border: 0.1rem solid snow
+        border-radius: 0.3rem
+        font-size: 1rem
+        padding-left: 1rem
+        padding-right: 1rem
+        padding-top: .3rem
+        padding-bottom: .3rem
+        color: whitesmoke
+        -webkit-appearance: none
+    &__question
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: ghostwhite
+
+.quiz
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100vw
+    overflow: scroll
+    &__options
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        padding-top: 1rem
+        width: 85vw
+        height: 30vh
+    &__title
+        font-size: 1.4rem
+        width: 80vw
+        height: 5vh
+        border: solid black 0.1rem
+        border-radius: 0.05rem
+        box-shadow: 0 0 5px black
+        text-align: center
+    &__question
+        font-size: 125%
+        width: 80vw
+        height: 10vh
+        border: solid black 0.1rem
+        border-radius: 0.05rem
+        box-shadow: 0 0 5px black
+        display: flex
+        justify-content: center
+
+.question
+    &__options
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 100vw
+        margin-bottom: 1.5rem
+
+    &__selector
+        width: 25vh
+        font-size: 1rem
+        font-family: 'Montserrat Alternates', sans serif
+        color: #fff
+        box-sizing: border-box
+        appearance: none
+        margin: 0
+        padding: .4rem 1.4rem .3rem .8rem
+        box-shadow: 0 1px 0 1px rgba(0,0,0,.03)
+        border-radius: .3rem
+        background-color: #257beb
+        background-image: url('https://image.flaticon.com/icons/svg/130/130907.svg')
+        background-repeat: no-repeat, repeat
+        background-position: right .7em top 50%, 0 0
+        background-size: .65em auto, 100%
+        &:focus
+            border-color: #aaa
+            box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7)
+            box-shadow: 0 0 0 3px -moz-mac-focusring
+            color: #222
+            outline: none
+    &__answers
+        display: grid
+        grid-template-columns: 50% 50%
+        grid-template-rows: 45% 45%
+        grid-template-areas: "answer1 answer2" "answer3 answer4"
+        height: 25vh
+        width: 75vw
+       
+        &--1
+            grid-area: answer1
+            background-color: rgb(208,25,55)
+            height: 10vh
+            width: 35vw
+            border-radius: 0.3rem
+            color: snow
+            display: flex
+            justify-content: center
+            text-align: center
+ 
+        &--2
+            grid-area: answer2
+            background-color: #2bd038
+            height: 10vh
+            width: 35vw
+            border-radius: 0.3rem
+            color: snow
+            display: flex
+            justify-content: center
+            text-align: center
+        &--3
+            grid-area: answer3
+            background-color: #4160f8
+            height: 10vh
+            width: 35vw
+            border-radius: 0.3rem
+            color: snow
+            display: flex
+            justify-content: center
+            text-align: center
+        &--4
+            grid-area: answer4
+            background-color: #f1ce4e
+            height: 10vh
+            width: 35vw
+            border-radius: 0.3rem
+            color: snow
+            display: flex
+            justify-content: center
+            text-align: center
+
+    &__add
+        height: 5vh
+        color: white
+        background-color: #673AB7
+        border-radius: 0.3rem
+        -webkit-appearance: none
+
+.ans_content
+    display: flex
+    justify-content: center
+    align-items: center
+
+.question__answers--container
+    display: flex
+    align-items: center
+    input[type="checkbox"]
+    display: none
+    input[type="checkbox"] + label span
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 2.5rem
+    height: 2.5rem
+    border: 0.2rem solid white
+    border-radius: 100%
+    background: silver
+    color: white
+    input[type="checkbox"]:checked + label span
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 2.5rem
+    height: 2.5rem
+    border: 0.2rem solid white
+    border-radius: 100%
+    background: #69b66f
+    color: white
+
+
+
+@media only screen and (min-width: 1024px)
+    .create__header
+        height: 10vh
+        
+
+
